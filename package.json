@@ -1,0 +1,10 @@
+{
+  "name": "artur-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.7.14",
+    "lowdb": "^7.0.1",
+    "qrcode-terminal": "^0.12.0"
+  }
+}
