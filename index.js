@@ -21,8 +21,10 @@ async function startBot() {
     sock.ev.on('connection.update', (update) => {
         const { connection, lastDisconnect, qr } = update
         if(qr) {
-            console.log("Escanea este QR con WhatsApp > Dispositivos Vinculados")
-            qrcode.generate(qr, {small: true})
+            if(qr) {
+    console.log("Escanea este QR con WhatsApp > Dispositivos Vinculados")
+    qrcode.generate(qr, {small: true})
+            }
         }
         if(connection === 'close') {
             if((lastDisconnect.error)?.output?.statusCode!== DisconnectReason.loggedOut) startBot()
